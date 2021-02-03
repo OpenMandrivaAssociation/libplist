@@ -8,12 +8,12 @@
 
 Summary:	Library for manipulating Apple Binary and XML Property Lists
 Name:		libplist
-Version:	2.2.0
+Version:	02022021
 Release:	1
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.libimobiledevice.org/
-Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.gz
+Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.xz
 BuildRequires:	make
 BuildRequires:	python-cython
 BuildRequires:	pkgconfig(glib-2.0)
