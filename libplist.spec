@@ -69,7 +69,7 @@ BuildRequires:	pkgconfig(python)
 %{name}, python libraries and support.
 
 %prep
-%setup -q -n %{name}-{version}
+%setup -q -n %{name}-%{version}
 
 %build
 autoreconf -fiv
