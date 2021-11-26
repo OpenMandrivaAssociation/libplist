@@ -20,8 +20,8 @@ BuildRequires:	make
 BuildRequires:	python-cython
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(python)
-#Obsoletes:	%{name} < 02022021-2
-#Provides:	%{name} = 02022021-2
+Obsoletes:	%{name} < 02022021-1
+Provides:	%{name} = 02022021-1
 
 %description
 libplist is a library for manipulating Apple Binary and XML Property Lists.
@@ -30,8 +30,8 @@ libplist is a library for manipulating Apple Binary and XML Property Lists.
 Group:		System/Libraries
 Summary:	Library for manipulating Apple Binary and XML Property Lists
 Suggests:	%{name} >= %{version}-%{release}
-#Obsoletes:	%{libname} < 02022021-2
-#Provides:	%{libname} = 02022021-2
+Obsoletes:	%{libname} < 02022021-1
+Provides:	%{libname} = 02022021-1
 
 %description -n %{libname}
 libplist is a library for manipulating Apple Binary and XML Property Lists.
@@ -41,8 +41,8 @@ Summary:	Development package for libplist
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
-#Obsoletes:	%{devname} < 02022021-2
-#Provides:	%{devname} = 02022021-2
+Obsoletes:	%{devname} < 02022021-1
+Provides:	%{devname} = 02022021-1
 
 %description -n %{devname}
 %{name}, development headers and libraries.
@@ -51,8 +51,8 @@ Provides:	%{name}-devel = %{version}-%{release}
 Summary:	C++ binding for libplist
 Group:		Development/C++
 Suggests:	%{name} >= %{version}-%{release}
-Obsoletes:	%{libnamecxx} < 02022021-2
-Provides:	%{libnamecxx} = 02022021-2
+Obsoletes:	%{libnamecxx} < 02022021-1
+Provides:	%{libnamecxx} = 02022021-1
 
 %description -n %{libnamecxx}
 C++ bindings for %{name}.
@@ -62,8 +62,8 @@ Summary:	Development package for libplist++
 Group:		Development/C++
 Requires:	%{libnamecxx} = %{version}-%{release}
 Provides:	%{name}++-devel = %{version}-%{release}
-#Obsoletes:	%{devnamecxx} < 02022021-2
-#Provides:	%{devnamecxx} = 02022021-2
+Obsoletes:	%{devnamecxx} < 02022021-1
+Provides:	%{devnamecxx} = 02022021-1
 
 %description -n %{devnamecxx}
 %name, C++ development headers and libraries.
@@ -74,8 +74,8 @@ Group:		Development/Python
 Requires:	python
 BuildRequires:	pkgconfig(python)
 #BuildRequires:	swig
-#Obsoletes:	python-plist < 02022021-2
-#Provides:	python-plist = 02022021-2
+Obsoletes:	python-plist < 02022021-1
+Provides:	python-plist = 02022021-1
 
 %description -n python-plist
 %{name}, python libraries and support.
