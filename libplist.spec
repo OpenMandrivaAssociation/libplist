@@ -6,16 +6,16 @@
 %define libnamecxx %mklibname plist++ %{api} %{major}
 %define devnamecxx %mklibname -d plist++
 
-%define	git	20210207
+%define	git	20211124
 
 Summary:	Library for manipulating Apple Binary and XML Property Lists
 Name:		libplist
-Version:	2.2.0
-Release:	3.%{git}.0
+Version:	2.2.1
+Release:	1.%{git}.0
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.libimobiledevice.org/
-Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.bz2
+Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.xz
 BuildRequires:	make
 BuildRequires:	python-cython
 BuildRequires:	pkgconfig(glib-2.0)
