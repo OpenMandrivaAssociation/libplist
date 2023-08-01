@@ -1,27 +1,27 @@
-%define major	3
+%define major	4
 %define api	2.0
 
-%define libname %mklibname plist %{api} %{major}
+%define oldlibname %mklibname plist %{api} 3
+%define libname %mklibname plist
 %define devname %mklibname -d plist
-%define libnamecxx %mklibname plist++ %{api} %{major}
+%define oldlibnamecxx %mklibname plist++ %{api} 3
+%define libnamecxx %mklibname plist++
 %define devnamecxx %mklibname -d plist++
 
-%define	git	20211124
+#define	git	20211124
 
 Summary:	Library for manipulating Apple Binary and XML Property Lists
 Name:		libplist
-Version:	2.2.1
-Release:	1.%{git}.0
+Version:	2.3.0
+Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
 Url:		http://www.libimobiledevice.org/
-Source0:	http://www.libimobiledevice.org/downloads/%{name}-%{version}.tar.xz
+Source0:	https://github.com/libimobiledevice/libplist/releases/download/%{version}/libplist-%{version}.tar.bz2
 BuildRequires:	make
-BuildRequires:	python-cython
+BuildRequires:	python-cython0
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(python)
-Obsoletes:	%{name} < 02022021-1
-Provides:	%{name} = 02022021-1
 
 %description
 libplist is a library for manipulating Apple Binary and XML Property Lists.
@@ -30,8 +30,7 @@ libplist is a library for manipulating Apple Binary and XML Property Lists.
 Group:		System/Libraries
 Summary:	Library for manipulating Apple Binary and XML Property Lists
 Suggests:	%{name} >= %{version}-%{release}
-Obsoletes:	%{libname} < 02022021-1
-Provides:	%{libname} = 02022021-1
+Obsoletes:	%{oldlibname} < %{EVRD}
 
 %description -n %{libname}
 libplist is a library for manipulating Apple Binary and XML Property Lists.
@@ -41,8 +40,6 @@ Summary:	Development package for libplist
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
-Obsoletes:	%{devname} < 02022021-1
-Provides:	%{devname} = 02022021-1
 
 %description -n %{devname}
 %{name}, development headers and libraries.
@@ -51,8 +48,7 @@ Provides:	%{devname} = 02022021-1
 Summary:	C++ binding for libplist
 Group:		Development/C++
 Suggests:	%{name} >= %{version}-%{release}
-Obsoletes:	%{libnamecxx} < 02022021-1
-Provides:	%{libnamecxx} = 02022021-1
+Obsoletes:	%{oldlibnamecxx} < %{EVRD}
 
 %description -n %{libnamecxx}
 C++ bindings for %{name}.
@@ -62,8 +58,6 @@ Summary:	Development package for libplist++
 Group:		Development/C++
 Requires:	%{libnamecxx} = %{version}-%{release}
 Provides:	%{name}++-devel = %{version}-%{release}
-Obsoletes:	%{devnamecxx} < 02022021-1
-Provides:	%{devnamecxx} = 02022021-1
 
 %description -n %{devnamecxx}
 %name, C++ development headers and libraries.
@@ -74,21 +68,18 @@ Group:		Development/Python
 Requires:	python
 BuildRequires:	pkgconfig(python)
 #BuildRequires:	swig
-Obsoletes:	python-plist < 02022021-1
-Provides:	python-plist = 02022021-1
 
 %description -n python-plist
 %{name}, python libraries and support.
 
 %prep
 %autosetup -p1
-
-%build
 autoreconf -fiv
 
 %configure \
 	--disable-static
 
+%build
 %make_build
 
 %install
