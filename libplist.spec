@@ -16,7 +16,7 @@ Version:	2.4.0
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	LGPLv2+
-Url:		http://www.libimobiledevice.org/
+Url:		https://www.libimobiledevice.org/
 Source0:	https://github.com/libimobiledevice/libplist/releases/download/%{version}/libplist-%{version}.tar.bz2
 BuildRequires:	make
 BuildRequires:	python-cython0
