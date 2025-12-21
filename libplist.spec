@@ -18,6 +18,10 @@ Group:		System/Libraries
 License:	LGPLv2+
 Url:		https://www.libimobiledevice.org/
 Source0:	https://github.com/libimobiledevice/libplist/releases/download/%{version}/libplist-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	make
 BuildRequires:	python-cython0
 BuildRequires:	pkgconfig(glib-2.0)
