@@ -12,7 +12,7 @@
 
 Summary:	Library for manipulating Apple Binary and XML Property Lists
 Name:		libplist
-Version:	2.4.0
+Version:	2.7.0
 Release:	%{?git:0.%{git}.}2
 Group:		System/Libraries
 License:	LGPLv2+
