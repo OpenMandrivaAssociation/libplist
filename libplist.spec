@@ -23,7 +23,7 @@ BuildRequires:	automake
 BuildRequires:	libtool-base
 BuildRequires:	slibtool
 BuildRequires:	make
-BuildRequires:	python-cython0
+BuildRequires:	python-cython
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(python)
 
